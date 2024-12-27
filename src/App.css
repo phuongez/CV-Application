@@ -32,6 +32,11 @@ input {
   margin-bottom: 20px;
 }
 
+/* App display */
+.app-display {
+  display: flex;
+}
+
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -67,4 +72,80 @@ input {
 
 .two-input-container .input-container {
   flex: 1;
+}
+
+/* Education field */
+.education-heading {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.education-heading > div {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.education-heading img {
+  height: 20px;
+}
+
+.addEducation {
+  margin: 20px auto;
+  width: 250px;
+  color: white;
+  background-color: cornflowerblue;
+}
+
+/* CV Display */
+.output-field {
+  background-color: darkgray;
+  width: 50%;
+  height: 100vh;
+  padding: 3% 3% 3% 3%;
+}
+
+.cv-display {
+  width: 100%;
+  height: 100%;
+}
+
+.cv-personal-infos {
+  width: 100%;
+  height: min(120px);
+  background-color: rgb(36, 57, 95);
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cv-personal-infos .user-name {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cv-personal-infos .user-contact {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cv-personal-infos .user-contact > div {
+  display: flex;
+  align-items: center;
+}
+
+.cv-personal-infos .user-contact > div img {
+  height: 20px;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+}
+
+.cv-edu-exp {
+  height: 600px;
+  background-color: white;
 }
