@@ -1,15 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   width: 100%;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+button {
+  font-family: 'Open Sans';
+  width: 100px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 15px;
+}
+
+label {
+  color: grey;
+  margin-bottom: 10px;
+}
+
+input {
+  border: 0;
+  border-radius: 4px;
+  background-color: #eaeaead3 ;
+  height: 35px;
+  margin-bottom: 20px;
 }
 
 .section-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.section-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.auto-fill-btn {
+  color: white;
+  background-color: cornflowerblue;
 }
 
 .input-field {
@@ -26,4 +62,9 @@ body {
 .two-input-container {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
+}
+
+.two-input-container .input-container {
+  flex: 1;
 }

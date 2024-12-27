@@ -24,7 +24,6 @@ function App() {
   }
 
   const handleInputChange = (e) => {
-    console.log(e);
     const { name, value } = e.target;
     setUserData({
       ...userData,
@@ -35,7 +34,7 @@ function App() {
   return (
     <>
       <div className="input-field">
-        <div className="personal-infos">
+        <div className="personal-infos input-container">
           <SectionTitle title="Personal Information" onClear={handleClear} onAutoFill={handleAutoFill}/>
           <PersonalInfos values={userData} onChange={handleInputChange}/>
         </div>

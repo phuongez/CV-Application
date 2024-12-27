@@ -6,8 +6,8 @@ export default function SectionTitle({title, onClear, onAutoFill}) {
             <div className="section-heading">
                 <h2>{title}</h2>
                 <div className="section-btns">
-                    <button onClick={() => onClear("personalInfos")}>Clear</button>
-                    <button>Auto-Fill</button>
+                    <button className="clear-btn" onClick={() => onClear("personalInfos")}>Clear</button>
+                    <button className="auto-fill-btn">Auto-Fill</button>
                 </div>
             </div>
         </>
