@@ -1,9 +1,9 @@
 
-export default function EducationInfos({onChange,values}) {
+export default function EducationInfos({index,onChange,value}) {
     return (
         <>
             <div className="education-heading">
-                <div>Education {}</div>
+                <div>Education {index+1}</div>
                 <img src="src/assets/delete-outline.svg" alt="bin icon" />
             </div>
             <div className="input-container">
@@ -13,7 +13,7 @@ export default function EducationInfos({onChange,values}) {
                     id="schoolName" 
                     name="schoolName"
                     onChange={onChange}
-                    value={values?.schoolName || ""}
+                    value={value?.schoolName || ""}
                     />
             </div>
             <div className="input-container">
@@ -23,7 +23,7 @@ export default function EducationInfos({onChange,values}) {
                     id="location" 
                     name="location"
                     onChange={onChange}
-                    value={values?.location || ""}
+                    value={value?.location || ""}
                     />
             </div>
             <div className="two-input-container">
@@ -34,7 +34,7 @@ export default function EducationInfos({onChange,values}) {
                         id="startDate" 
                         name="startDate"
                         onChange={onChange}
-                        value={values?.startDate || ""}
+                        value={value?.startDate || ""}
                         />
                 </div>
                 <div className="input-container">
@@ -44,7 +44,7 @@ export default function EducationInfos({onChange,values}) {
                         id="endDate" 
                         name="endDate"
                         onChange={onChange}
-                        value={values?.endDate || ""}
+                        value={value?.endDate || ""}
                         />
                 </div>
             </div>
@@ -55,10 +55,10 @@ export default function EducationInfos({onChange,values}) {
                     id="location" 
                     name="location"
                     onChange={onChange}
-                    value={values?.location || ""}
+                    value={value?.location || ""}
                     />
             </div>
-            <button className="addEducation">Add New Education</button>
+            
         </>
     );
 }

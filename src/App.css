@@ -100,6 +100,9 @@ input {
 
 /* CV Display */
 .output-field {
+  position: sticky;
+  top: 0;
+  right: 0;
   background-color: darkgray;
   width: 50%;
   height: 100vh;
@@ -120,11 +123,11 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .cv-personal-infos .user-name {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   text-align: center;
 }
@@ -132,16 +135,17 @@ input {
 .cv-personal-infos .user-contact {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .cv-personal-infos .user-contact > div {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 .cv-personal-infos .user-contact > div img {
-  height: 20px;
+  height: 15px;
   filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
 }
 

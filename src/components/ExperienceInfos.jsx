@@ -68,7 +68,7 @@ export default function ExperienceInfos({onChange,values}) {
                     value={values?.description || ""}
                     />
             </div>
-            <button className="addEducation">Add New Education</button>
+            <button className="addEducation">Add New Experience</button>
         </>
     );
 }
