@@ -1,10 +1,12 @@
 
-export default function ExperienceInfos({onChange,values}) {
+export default function ExperienceInfos({index,onChange,onDelete,value}) {
     return (
         <>
             <div className="education-heading">
-                <div>Experience {}</div>
-                <img src="src/assets/delete-outline.svg" alt="bin icon" />
+                <div>Experience {index+1}</div>
+                <button className="delete-icon" onClick={onDelete}>
+                    <img src="src/assets/delete-outline.svg" alt="bin icon" />
+                </button>
             </div>
             <div className="input-container">
                 <label htmlFor="companyName">Company Name</label>
@@ -13,7 +15,7 @@ export default function ExperienceInfos({onChange,values}) {
                     id="companyName" 
                     name="companyName"
                     onChange={onChange}
-                    value={values?.companyName || ""}
+                    value={value?.companyName || ""}
                     />
             </div>
             <div className="input-container">
@@ -23,7 +25,7 @@ export default function ExperienceInfos({onChange,values}) {
                     id="position" 
                     name="position"
                     onChange={onChange}
-                    value={values?.position || ""}
+                    value={value?.position || ""}
                     />
             </div>
             <div className="two-input-container">
@@ -34,7 +36,7 @@ export default function ExperienceInfos({onChange,values}) {
                         id="startDate" 
                         name="startDate"
                         onChange={onChange}
-                        value={values?.startDate || ""}
+                        value={value?.startDate || ""}
                         />
                 </div>
                 <div className="input-container">
@@ -44,7 +46,7 @@ export default function ExperienceInfos({onChange,values}) {
                         id="endDate" 
                         name="endDate"
                         onChange={onChange}
-                        value={values?.endDate || ""}
+                        value={value?.endDate || ""}
                         />
                 </div>
             </div>
@@ -55,20 +57,19 @@ export default function ExperienceInfos({onChange,values}) {
                     id="location" 
                     name="location"
                     onChange={onChange}
-                    value={values?.location || ""}
+                    value={value?.location || ""}
                     />
             </div>
             <div className="input-container">
                 <label htmlFor="description">Description</label>
-                <input 
+                <textarea
                     type="text" 
                     id="description" 
                     name="description"
                     onChange={onChange}
-                    value={values?.description || ""}
+                    value={value?.description || ""}
                     />
             </div>
-            <button className="addEducation">Add New Experience</button>
         </>
     );
 }

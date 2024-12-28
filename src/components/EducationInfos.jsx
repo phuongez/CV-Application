@@ -1,10 +1,13 @@
 
-export default function EducationInfos({index,onChange,value}) {
+export default function EducationInfos({index,onChange,onDelete,value}) {
     return (
         <>
             <div className="education-heading">
                 <div>Education {index+1}</div>
-                <img src="src/assets/delete-outline.svg" alt="bin icon" />
+                <button className="delete-icon" onClick={onDelete}>
+                    <img src="src/assets/delete-outline.svg" alt="bin icon" />
+                </button>
+                
             </div>
             <div className="input-container">
                 <label htmlFor="schoolName">School Name</label>
@@ -17,13 +20,13 @@ export default function EducationInfos({index,onChange,value}) {
                     />
             </div>
             <div className="input-container">
-                <label htmlFor="location">location</label>
+                <label htmlFor="degree">Degree</label>
                 <input 
                     type="text" 
-                    id="location" 
-                    name="location"
+                    id="degree" 
+                    name="degree"
                     onChange={onChange}
-                    value={value?.location || ""}
+                    value={value?.degree || ""}
                     />
             </div>
             <div className="two-input-container">

@@ -21,7 +21,28 @@ export default function OutputCV({userData,userEducation,userExperience}) {
                 </div>
             </div>
             <div className="cv-edu-exp">
-
+                <div className="cv-title">Education</div>
+                <div className="cv-education">
+                    {userEducation.map((edu,index) => (
+                        <div key={index} className="education-display">
+                            <p>{edu.startDate} - {edu.endDate}</p>
+                            <p><b>{edu.schoolName}</b></p>
+                            <p>{edu.location}</p>
+                            <p>{edu.degree}</p>
+                        </div>    
+                    ))}
+                </div>
+                <div className="cv-title">Experience</div>
+                <div className="cv-education">
+                    {userExperience.map((exp,index) => (
+                        <div key={index} className="education-display">
+                            <p>{exp.startDate} - {exp.endDate}</p>
+                            <p><b>{exp.companyName} ({exp.position})</b></p>
+                            <p>{exp.location}</p>
+                            <p>{exp.description}</p>
+                        </div>    
+                    ))}
+                </div>
             </div>
         </div>
     )
