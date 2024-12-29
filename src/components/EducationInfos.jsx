@@ -5,7 +5,7 @@ export default function EducationInfos({index,onChange,onDelete,value}) {
             <div className="education-heading">
                 <div>Education {index+1}</div>
                 <button className="delete-icon" onClick={onDelete}>
-                    <img src="src/assets/delete-outline.svg" alt="bin icon" />
+                    <img src="assets/delete-outline.svg" alt="bin icon" />
                 </button>
                 
             </div>
